@@ -51,7 +51,6 @@ public class CustomAuthFilter extends OncePerRequestFilter {
         String password = "";
         UsernamePasswordAuthenticationToken authenticationToken;
         String uri = request.getRequestURI();
-        logger.info("Request URI: " + uri);
 
         String headerToken = "";
         headerToken = request.getHeader(AUTH_HEADER);
