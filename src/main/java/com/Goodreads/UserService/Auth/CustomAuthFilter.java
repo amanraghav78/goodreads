@@ -64,7 +64,7 @@ public class CustomAuthFilter extends OncePerRequestFilter {
             headerToken = StringUtils.delete(headerToken, AppConstants.BASIC_TOKEN_PREFIX).trim();
             username = JwtUtil.decodedBase64(headerToken)[0];
             password = JwtUtil.decodedBase64(headerToken)[1];
-            this.logger.info("Credentials in basic token: username: " + username + " password: " + password);
+            this.logger.info("Credentials in basic token used: username: " + username + " password: " + password);
             authenticationToken = new UsernamePasswordAuthenticationToken(username, password);
             Authentication authenticationResult = null;
             try {
