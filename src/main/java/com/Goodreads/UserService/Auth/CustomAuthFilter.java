@@ -114,7 +114,7 @@ public class CustomAuthFilter extends OncePerRequestFilter {
                         throw new InvalidTokenInHeaderException("Token validation returned false");
                     }
                 } else {
-                    logger.info("Token is not correct!");
+                    logger.info("Token is not valid!");
                     throw new InvalidTokenInHeaderException("Username not found in token");
                 }
             } catch (ExpiredJwtException e) {
