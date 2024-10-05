@@ -115,7 +115,7 @@ public class CustomAuthFilter extends OncePerRequestFilter {
                     }
                 } else {
                     logger.info("Token is not valid!");
-                    throw new InvalidTokenInHeaderException("Username was not found in token");
+                    throw new InvalidTokenInHeaderException("Username wasn't found in token");
                 }
             } catch (ExpiredJwtException e) {
                 SecurityContextHolder.getContext().setAuthentication(UsernamePasswordAuthenticationToken.unauthenticated(userDetails, null));
