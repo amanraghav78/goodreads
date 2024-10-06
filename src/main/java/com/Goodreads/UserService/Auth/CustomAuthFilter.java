@@ -110,7 +110,7 @@ public class CustomAuthFilter extends OncePerRequestFilter {
 
                         filterChain.doFilter(request, response);
                     } else {
-                        logger.info("Jwt token is invalid!");
+                        logger.info("Jwt token is invalid! Please check");
                         throw new InvalidTokenInHeaderException("Token validation returned false");
                     }
                 } else {
